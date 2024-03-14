@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+|  | Pemrograman Berbasis Framework 2024 |
+|--|--|
+| NIM |  2141720225|
+| Nama |  Muhammad Akbar Nur Ihsan |
+| Kelas | TI - 3A |
 
-## Getting Started
+### Jawaban Soal Praktikum 4
+1. Jika tombol "Artikel Selanjutnya" ditekan sebanyak 5 kali (atau melebihi jumlah total artikel), pada implementasi yang ada, akan terjadi error karena indeks index akan melampaui panjang sculptureList. Ini akan menyebabkan akses ke indeks yang tidak valid dalam sculptureList, yang akan menghasilkan undefined.
 
-First, run the development server:
+2. function handlePrevClick(){
+        setIndex(PrevIndex => (PrevIndex - 1 + sculptureList.length) % sculptureList.length)
+    }
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3.  function handlePrevClick(){
+        setIndex(PrevIndex => (PrevIndex - 1 + sculptureList.length) % sculptureList.length)
+    }
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot](assets-report/1.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Jawaban Soal Praktikum 5
+1. tidak ada perbedaan untuk fungsinya hanya berbeda yang pertama menggunakan state Fullname dan yang kedua hanya menggunakan variable biasa
+2. karena hal ini membuat state redundan, dan bisa membuat kesalahan/bug pada aplikasi react/nextjs. Untuk itu, state fullName bisa dihapus dan digantikan variable biasa.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Jawaban Soal Praktikum 6
+![Screenshot](assets-report/2.png)
+1. Untuk memberikan React sebuah identitas unik untuk setiap elemen dalam daftar yang di-render. 
+2. Digunakan untuk memberikan identifier unik kepada setiap elemen dalam daftar komponen. Dalam konteks ini, key digunakan untuk membantu React dalam membedakan antara komponen-komponen <Chat> yang berbeda di dalam daftar yang mungkin di-render oleh React.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

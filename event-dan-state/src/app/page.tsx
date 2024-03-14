@@ -1,7 +1,9 @@
 "use client"
 import { Tombol_1, Tombol_2, Tombol_3 } from "@/components/button";
 import Gallery from "@/components/gallery";
+import { Form, Form2 } from "@/components/form"
 import Image from "next/image";
+import Acccordion from "@/components/accordion";
 
 export default function Home() {
   return (
@@ -18,6 +20,12 @@ export default function Home() {
             <Tombol_3 isiPesan="Child Element : Tombol-2" namaTombol="Tombol-2"/>
         </div>
         <Gallery/>
+        <br></br>
+        <Form/>
+        <br></br>
+        <Form2/>
+        <br></br>
+        <Acccordion/>
     </main>
   );
 }

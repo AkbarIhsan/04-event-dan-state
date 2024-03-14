@@ -5,12 +5,22 @@ export default function Gallery(){
     const [index, setIndex] = useState(0);
 
     function handleClick(){
-        setIndex(index + 1);  
+        setIndex(prevIndex => (prevIndex + 1) % sculptureList.length);  
+    }
+
+    function handlePrevClick(){
+        setIndex(PrevIndex => (PrevIndex - 1 + sculptureList.length) % sculptureList.length)
     }
 
     let sculpture = sculptureList[index];
     return(
         <>
+            <button
+                onClick={handlePrevClick}
+                className="bg-blue-500 hover:bg-blue-700 p-2 m-2 rounded-md">
+                    Artikel Sebelumnya
+            </button>
+
             <button
                 onClick={handleClick}
                 className="bg-blue-500 hover:bg-blue-700 p-2 m-2 rounded-md">
